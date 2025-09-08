@@ -1,0 +1,162 @@
+/* inventario.module.css */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.buscador {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex: 1;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid #dcdde3;
+  border-radius: 8px;
+  background: #fff;
+  color:#111;
+}
+
+.button {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 0.55rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tabla {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.th, .td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #eef0f4;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.badge {
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+.badgeActivo { background: #16a34a; }
+.badgeMasVendido { background: #7c3aed; }
+.badgePendiente { background: #f59e0b; }
+
+.empty {
+  padding: 1rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Botones de acciones */
+.acciones {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: transform 0.05s ease-in-out;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btnEdit {
+  background: #111;
+  color: #fff;
+}
+
+.btnDelete {
+  background: #ef4444; 
+  color: #fff;
+}
+
+/* Fondo semitransparente */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Contenedor del modal */
+.modal {
+  background-color: var(--bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  max-width: 720px;
+  width: 90%;
+  padding: 1.5rem;
+  animation: slideUp 0.3s ease;
+  position: relative;
+}
+
+/* Botón de cierre */
+.modalClose {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--text);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modalClose:hover {
+  color: var(--accent-hover);
+}
+
+/* Animación de entrada */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
