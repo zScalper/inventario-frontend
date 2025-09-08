@@ -1,41 +1,29 @@
-# 🛠️ Inventario Backend
 
-API REST para la gestión de productos, categorías, unidades y estados. Construido con Django y MySQL.
+---
+
+### ✅ `inventario-frontend/README.md`
+
+```markdown
+# 💻 Inventario Frontend
+
+Interfaz web para la gestión de productos. Construido con Next.js y React.
 
 ## 🚀 Tecnologías
 
-- Python 3.13+
-- Django 5.x
-- Django REST Framework
-- MySQL
+- Next.js 14+
+- React 18+
+- Axios
+- CSS Modules
 
 ## ⚙️ Instalación
 
 ```bash
-# Crear entorno virtual
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-
 # Instalar dependencias
-pip install -r requirements.txt
+npm install
 
-# Configurar base de datos en settings.py
-# Ejecutar migraciones
-python manage.py makemigrations
-python manage.py migrate
+# Configurar variable de entorno
+# Crear archivo .env.local
+NEXT_PUBLIC_API_BASE=http://localhost:8000
 
-# Crear superusuario (opcional)
-python manage.py createsuperuser
-
-# Ejecutar servidor
-python manage.py runserver
-
-GET /api/productos/
-
-POST /api/productos/
-
-GET /api/categorias/
-
-GET /api/unidades/
-
-GET /api/estados/
+# Ejecutar en desarrollo
+npm run dev
